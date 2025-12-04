@@ -7,8 +7,6 @@ Directory layout
 - `openmp/` – OpenMP implementations (`bfs_openmp.c`, `dfs_openmp.c`) and `Makefile`.
 - `mpi/` – MPI implementations (`bfs_mpi.c`, `dfs_mpi.c`) and `Makefile`.
 - `cuda/` – CUDA implementations (`bfs_cuda.cu`, `dfs_cuda.cu`) and `Makefile`.
-- `datasets/` – graph input files used for testing and benchmarking.
-- `results/` – performance outputs and `performance_comparison.txt`.
 
 Prerequisites
 - A POSIX-like build environment (Linux, macOS, or WSL on Windows) with `make` and a C compiler (`gcc`/`clang`).
