@@ -54,22 +54,29 @@ cd serial
 OpenMP example (set number of threads via `OMP_NUM_THREADS`):
 ```powershell
 cd openmp
-$env:OMP_NUM_THREADS=4; ./bfs_openmp  
+$env:OMP_NUM_THREADS=4;
+./bfs_openmp  
 ```
 
 MPI example (run with 4 processes):
 ```powershell
 cd mpi
-mpirun -np 4 ./bfs_mpi  
+mpirun -np 4
+./bfs_mpi  
 ```
 
 CUDA example (if built and a CUDA-capable GPU is present):
 ```powershell
 cd cuda
-./bfs_cuda  
+%%writefile bfs_cuda.cu
+!nvcc bfs_cuda.cu -o bfs_cuda
+!./bfs_cuda
+
+%%writefile dfs_cuda.cu
+!nvcc dfs_cuda.cu -o dfs_cuda
+!./dfs_cuda
 ```
-Results
-Measured outputs and a comparative summary are stored in `results/performance_comparison.txt`.
+ 
 
  
 
